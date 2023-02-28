@@ -1,16 +1,16 @@
 .btn-11 {
     overflow: hidden;
     transition: all 0.5s ease;
-    border-radius: 0;
-    border: 3px solid #0d63a5;
+    border-radius: 4px;
+    border: 3px solid #11052C;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: #0d63a5;
-    color: #001f3f;
+    background-color: #FFE459;
+    color: #11052C;
 }
 .btn-11:hover {
-    background: #001f3f;
-    color: #0d63a5;
+    background: #11052C;
+    color: #FFE459;
 }
