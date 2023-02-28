@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  db:
+    container_name: db
+    image: postgres:13-alpine
+
+    environment:
+      - POSTGRES_USER=alexdenkk
+      - POSTGRES_PASSWORD=12345678
+      - POSTGRES_DB=db
+
+    ports:
+      - 5432:5432
+    expose:
+      - 5432
+
+  api:
+    container_name: api
+
+    build:
+      context: ../..
+      dockerfile: deployments/docker/Dockerfile
+
+    command: ./server -db-password=12345678
+
+    ports:
+      - 8080:8080
