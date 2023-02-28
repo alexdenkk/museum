@@ -1,0 +1,16 @@
+.btn-11 {
+    overflow: hidden;
+    transition: all 0.5s ease;
+    border-radius: 0;
+    border: 3px solid #0d63a5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #0d63a5;
+    color: #001f3f;
+}
+.btn-11:hover {
+    background: #001f3f;
+    color: #0d63a5;
+}
