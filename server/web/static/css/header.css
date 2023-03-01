@@ -1,0 +1,20 @@
+header {
+	height: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+    margin-left: 3%;
+	margin-right: 3%;
+	background-color: #D39C4A;
+	border-radius: 5px;
+	text-align: center;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#tiles_header {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0.75);
+    
+    border-radius: 10px;
+    margin-top: 2px;
+}
