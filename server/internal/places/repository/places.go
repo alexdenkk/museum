@@ -17,12 +17,12 @@ func (r *Repository) Get(ctx context.Context, id uint) (model.Place, error) {
 	return place, result.Error
 }
 
-func (r *Repository) Create(ctx context.Context, place model.Place) error {
-	result := r.DB.Create(&place)
+func (r *Repository) Create(ctx context.Context, place *model.Place) error {
+	result := r.DB.Create(place)
 	return result.Error
 }
 
-func (r *Repository) Update(ctx context.Context, place model.Place) error {
+func (r *Repository) Update(ctx context.Context, place *model.Place) error {
 	result := r.DB.Save(&place)
 	return result.Error
 }

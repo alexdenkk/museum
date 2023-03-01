@@ -1,0 +1,20 @@
+{{ define "links"}}
+    <link rel="stylesheet" href="/static/css/preview.css">
+{{ end }}
+
+{{ define "title" }}Мероприятия{{ end }}
+
+{{ define "content" }}
+    <h1 class="title">Мероприятия</h1>
+
+    {{range $event := .Events }}
+        <a href="/event/{{ $event.ID }}/">
+            <div class="preview">
+                <img src="/static/preview-img/events/{{ $event.ImgAddr }}">
+                <p>
+                    {{ $event.Name }}
+                </p>
+            </div>
+        </a>
+    {{end}}
+{{ end }}

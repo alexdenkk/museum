@@ -10,4 +10,5 @@ type Event struct {
 	PlaceID     uint   `json:"place_id" gorm:"not null"`
 	Name        string `json:"name" gorm:"not null"`
 	Description string `json:"description" gorm:"not null"`
+	ImgAddr     string `json:"img_addr"`
 }

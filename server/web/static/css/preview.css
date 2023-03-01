@@ -1,0 +1,83 @@
+.title {
+    font-size: 3em;
+    font-weight: 600;
+    color: #f1d46e;
+    margin: 20px;
+}
+
+.preview {
+    display: inline-block;
+    background-color: #3f0083;
+    color: #f1d46e;
+    border: 3px solid #f1d46e;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.preview:hover {
+    background-color: #f1d46e;
+    color: #3f0083;
+}
+
+.preview img {
+    width: 280px;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.preview p, .preview h1 {
+    font-weight: 600;
+    font-size: 1.5em;
+    width: 280px;
+    white-space:pre-line;
+}
+
+.preview a {
+    text-decoration: none;
+    font-size: 1em;
+}
+
+
+.preview-full {
+    display: inline-block;
+    background-color: #3f0083;
+    color: #f1d46e;
+    border: 3px solid #f1d46e;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    transition: 0.3s;
+}
+
+.preview-full img {
+    width: 280px;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.preview-full p, .preview-full h1 {
+    font-weight: 600;
+    font-size: 1.5em;
+    width: 280px;
+    white-space:pre-line;
+}
+
+.preview-btn {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #f1d46e;
+    background-color: #3f0083;
+    color: #f1d46e;
+    transition: 0.3s;
+    min-width: 200px;
+}
+
+.preview-btn:hover {
+    background-color: #f1d46e;
+    color: #3f0083;
+}

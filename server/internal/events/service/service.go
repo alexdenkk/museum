@@ -5,13 +5,11 @@ import (
 )
 
 type Service struct {
-	SignKey    []byte
 	Repository events.Repository
 }
 
-func New(repo events.Repository, key []byte) *Service {
+func New(repo events.Repository) *Service {
 	return &Service{
 		Repository: repo,
-		SignKey:    key,
 	}
 }

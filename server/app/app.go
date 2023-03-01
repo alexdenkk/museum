@@ -8,19 +8,19 @@ import (
 	"gorm.io/gorm"
 
 	// handlers
-	// events_handler "akpl/museum/internal/events/gateway/http"
-	// places_handler "akpl/museum/internal/places/gateway/http"
+	events_handler "akpl/museum/internal/events/gateway/http"
+	places_handler "akpl/museum/internal/places/gateway/http"
 	users_handler "akpl/museum/internal/users/gateway/http"
 )
 
 type App struct {
-	UsersHandler *users_handler.Handler
-	//EventsHandler *events_handler.Handler
-	//PlacesHandler *places_handler.Handler
-	Server  *http.Server
-	MW      *middleware.Middleware
-	SignKey []byte
-	DB      *gorm.DB
+	UsersHandler  *users_handler.Handler
+	EventsHandler *events_handler.Handler
+	PlacesHandler *places_handler.Handler
+	Server        *http.Server
+	MW            *middleware.Middleware
+	SignKey       []byte
+	DB            *gorm.DB
 }
 
 func New(db *gorm.DB, key []byte, addr string) *App {
@@ -38,6 +38,8 @@ func New(db *gorm.DB, key []byte, addr string) *App {
 	app.MW = middleware.New(app.SignKey)
 
 	app.InitUsersService()
+	app.InitPlacesService()
+	app.InitEventsService()
 
 	return app
 }

@@ -9,7 +9,7 @@
     <title>{{template "title" . }}</title>
 </head>
 
-<body style="background: url('/static/images/stars.jpg'); background-size:auto; text-align: center;">
+<body style="background: url('/static/images/stars.jpg'); background-size:auto; text-align: center; text-decoration: none;">
     <nav class="navbar navbar-expand-lg" color="#f1d46e">
         <style>
             * {
@@ -75,22 +75,19 @@
             }
         </style>
       
-        <a class="navbar-brand" href="#">Ночь музеев</a>
+        <a class="navbar-brand" href="/">Ночь музеев</a>
 
         <div class="collapse navbar-collapse" >
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Главная</a>
+                <a class="nav-link" href="/place/all/">Места</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Музеи</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">События</a>
+                <a class="nav-link" href="/event/all/">Мероприятия</a>
             </li>
           </ul>
-          <form class="form-inline">
-            <input class="form-control" placeholder="Search" aria-label="Search">
+          <form class="form-inline" action="/event/search/">
+            <input class="form-control" placeholder="Вводи!" name="k" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Поиск</button>
           </form>
         </div>

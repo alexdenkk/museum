@@ -15,7 +15,7 @@ func (s *Service) Get(ctx context.Context, id uint) (model.Place, error) {
 	return s.Repository.Get(ctx, id)
 }
 
-func (s *Service) Create(ctx context.Context, place model.Place, act *token.Claims) error {
+func (s *Service) Create(ctx context.Context, place *model.Place, act *token.Claims) error {
 	if act.Role != model.ADMIN {
 		return places.PermissionsError
 	}
@@ -27,7 +27,7 @@ func (s *Service) Create(ctx context.Context, place model.Place, act *token.Clai
 	return s.Repository.Create(ctx, place)
 }
 
-func (s *Service) Update(ctx context.Context, place model.Place, act *token.Claims) error {
+func (s *Service) Update(ctx context.Context, place *model.Place, act *token.Claims) error {
 	if act.Role != model.ADMIN {
 		return places.PermissionsError
 	}

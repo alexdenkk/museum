@@ -1,0 +1,20 @@
+{{ define "links"}}
+    <link rel="stylesheet" href="/static/css/preview.css">
+{{ end }}
+
+{{ define "title" }}Места проведения{{ end }}
+
+{{ define "content" }}
+    <h1 class="title">Места проведения мероприятий</h1>
+
+    {{range $place := .Places }}
+        <a href="/place/{{ $place.ID }}/">
+            <div class="preview">
+                <img src="/static/preview-img/places/{{ $place.ImgAddr }}">
+                <p>
+                    {{ $place.Name }}
+                </p>
+            </div>
+        </a>
+    {{end}}
+{{ end }}

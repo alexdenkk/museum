@@ -1,0 +1,21 @@
+{{ define "links"}}
+    <link rel="stylesheet" href="/static/css/preview.css">
+{{ end }}
+
+{{ define "title" }} {{ .Place.Name }} {{ end }}
+
+{{ define "content" }}
+    <div class="preview-full" style="max-height: 1000px;">
+        <img src="/static/preview-img/places/{{ .Place.ImgAddr }}">
+        <h1>
+            {{ .Place.Name }}
+        </h1>
+        <p>
+            {{ .Place.Description }}
+        </p>
+        <p>
+            {{ .Place.Address }}
+        </p>
+        <a href="/event/for/{{ .Place.ID }}/"><button class="preview-btn">Мероприятия</button></a>
+    </div>
+{{ end }}

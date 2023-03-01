@@ -8,9 +8,10 @@ import (
 
 type Service interface {
 	Search(ctx context.Context, query string) ([]model.Event, error)
+	GetFor(ctx context.Context, place_id uint) ([]model.Event, error)
 	GetAll(ctx context.Context) ([]model.Event, error)
 	Get(ctx context.Context, id uint) (model.Event, error)
-	Create(ctx context.Context, event model.Event, act *token.Claims) error
-	Update(ctx context.Context, event model.Event, act *token.Claims) error
-	Delete(ctx context.Context, id uint) error
+	Create(ctx context.Context, event *model.Event, act *token.Claims) error
+	Update(ctx context.Context, event *model.Event, act *token.Claims) error
+	Delete(ctx context.Context, id uint, act *token.Claims) error
 }

@@ -1,0 +1,17 @@
+{{ define "links"}}
+    <link rel="stylesheet" href="/static/css/preview.css">
+{{ end }}
+
+{{ define "title" }} {{ .Event.Name }} {{ end }}
+
+{{ define "content" }}
+    <div class="preview-full" style="max-height: 1000px;">
+        <img src="/static/preview-img/events/{{ .Event.ImgAddr }}">
+        <h1>
+            {{ .Event.Name }}
+        </h1>
+        <p>
+            {{ .Event.Description }}
+        </p>
+    </div>
+{{ end }}

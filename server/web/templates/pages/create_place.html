@@ -1,0 +1,17 @@
+{{ define "links"}}
+    <link rel="stylesheet" href="/static/css/preview.css">
+    <link rel="stylesheet" href="/static/css/input.css">
+{{ end }}
+
+{{ define "title" }} Добавление {{ end }}
+
+{{ define "content" }}
+<form method="post" class="form" enctype="multipart/form-data">
+    <h1 class="form-title" >Добавление места</h1>
+    <input type="text" maxlength="128" name="name" class="input" placeholder="Наименование">
+    <input type="text" maxlength="128" name="description" class="input" placeholder="Описание">
+    <input type="text" maxlength="128" name="address" class="input" placeholder="Адрес">
+    <input type="file" name="img" placeholder="Изображение" class="input">
+    <p><input class="form-btn" type="submit" value="Добавить"></p>
+</form>
+{{ end }}

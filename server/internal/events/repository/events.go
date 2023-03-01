@@ -7,7 +7,13 @@ import (
 
 func (r *Repository) Search(ctx context.Context, query string) ([]model.Event, error) {
 	var events []model.Event
-	result := r.DB.Where("name LIKE %?%", query).Find(&events)
+	result := r.DB.Where("name LIKE ?", "%"+query+"%").Find(&events)
+	return events, result.Error
+}
+
+func (r *Repository) GetFor(ctx context.Context, place_id uint) ([]model.Event, error) {
+	var events []model.Event
+	result := r.DB.Where("place_id = ?", place_id).Find(&events)
 	return events, result.Error
 }
 
@@ -23,12 +29,12 @@ func (r *Repository) Get(ctx context.Context, id uint) (model.Event, error) {
 	return event, result.Error
 }
 
-func (r *Repository) Create(ctx context.Context, event model.Event) error {
+func (r *Repository) Create(ctx context.Context, event *model.Event) error {
 	result := r.DB.Create(&event)
 	return result.Error
 }
 
-func (r *Repository) Update(ctx context.Context, event model.Event) error {
+func (r *Repository) Update(ctx context.Context, event *model.Event) error {
 	result := r.DB.Save(&event)
 	return result.Error
 }
