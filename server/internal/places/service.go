@@ -2,13 +2,14 @@ package places
 
 import (
 	"akpl/museum/model"
+	"akpl/museum/pkg/token"
 	"context"
 )
 
-type Repository interface {
+type Service interface {
 	GetAll(ctx context.Context) ([]model.Place, error)
 	Get(ctx context.Context, id uint) (model.Place, error)
-	Create(ctx context.Context, place model.Place) error
-	Update(ctx context.Context, place model.Place) error
-	Delete(ctx context.Context, id uint) error
+	Create(ctx context.Context, place model.Place, act *token.Claims) error
+	Update(ctx context.Context, place model.Place, act *token.Claims) error
+	Delete(ctx context.Context, id uint, act *token.Claims) error
 }
