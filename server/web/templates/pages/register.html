@@ -1,0 +1,15 @@
+{{ define "links"}}
+    <link rel="stylesheet" href="/static/css/input.css">
+{{ end }}
+
+{{ define "title" }}Регистрация{{ end }}
+
+{{ define "content"}}
+    <form method="post" class="form">
+        <h1 class="form-title">Регистрация</h1>
+        <input type="text" name="login" class="input" placeholder="Логин">
+        <input type="password" name="password" class="input" placeholder="Пароль">
+        <input type="number" max="150" name="login" class="input" placeholder="Возраст">
+        <p><input class="form-btn" type="submit" value="Регистрация"></p>
+    </form>
+{{ end }}

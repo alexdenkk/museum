@@ -17,7 +17,6 @@ func GenerateJWT(claims Claims, key []byte) (string, error) {
 }
 
 func ParseJWT(token string, key []byte) (*Claims, error) {
-
 	t, err := jwt.ParseWithClaims(token, &Claims{}, func(token *jwt.Token) (interface{}, error) {
 		return key, nil
 	})

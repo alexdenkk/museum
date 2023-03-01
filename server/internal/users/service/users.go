@@ -131,7 +131,7 @@ func (s *Service) Register(ctx context.Context, login, password string) error {
 		return users.LoginAlreadyExistsError
 	}
 
-	if len(password) < 8 || len(login) < 4 {
+	if len(password) < 6 || len(login) < 4 {
 		return users.ShortFieldError
 	}
 

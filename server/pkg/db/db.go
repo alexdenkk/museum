@@ -1,26 +1,13 @@
 package db
 
 import (
-	"strings"
-
-	"gorm.io/driver/postgres"
+	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
 )
 
-func Connect(dbName, dbPort, dbUser, dbPassword string) (*gorm.DB, error) {
-	dsn := []string{
-		"dbname=" + dbName,
-		"port=" + dbPort,
-		"user=" + dbUser,
-		"password=" + dbPassword,
-		"host=db",
-		"sslmode=disable",
-		"TimeZone=Asia/Novosibirsk",
-	}
-
-	db, err := gorm.Open(
-		postgres.Open(strings.Join(dsn, " ")),
+func Connect(dbName string) (*gorm.DB, error) {
+	db, err := gorm.Open(sqlite.Open("gorm.db"),
 		&gorm.Config{
 			Logger: logger.Default.LogMode(logger.Silent),
 		},
