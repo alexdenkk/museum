@@ -4,11 +4,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../static/css/style.css">
-    <link rel="stylesheet" href="../static/css/header.css">
-    <title>Document</title>
+    <title>Ночь музеев</title>
 </head>
 
-<body>
+<body style="background: url('../static/images/stars.jpg'); background-size:auto;">
+    <nav class="navbar navbar-expand-lg" color="#f1d46e">
+        <style>
+            * {
+                text-decoration: none;
+            }
+
+            .navbar {
+                backdrop-filter: blur(10px);
+                border-bottom: 3px solid #f1d46e;
+            }
+
+            .form-control {
+                background: transparent;
+                border-color: #f1d46e;
+                margin-right: 3px;
+                color: #f1d46e;
+                
+            }
+
+            .form-control::placeholder {
+                color: #88783e;
+            }
+
+            .form-control:focus {
+                background: transparent;
+                box-shadow: none;
+                border-color: #f1d46e;
+                color: #f1d46e;
+            }
+
+            .btn-outline-success {
+                border-color: #f1d46e;
+                color: #f1d46e;
+            }
+
+            .btn-outline-success:hover {
+                background-color: #f1d46e;
+                color: #3f0083;
+                border-color: #f1d46e;
+            }
+
+            .nav-link {
+                padding: 5px;
+                background-color: #f1d46e;
+                color: #3f0083;
+                border-radius: 15px;
+                margin-left: 5px;
+                transition: 0.3s;
+            }
+
+            .nav-link:hover {
+                background-color: #3f0083;
+                color: #f1d46e;
+            }
+
+            .navbar-brand {
+                color: #fff;
+                font-weight: 600;
+            }
+
+            .navbar-brand:hover {
+                color: #f1d46e;
+            }
+        </style>
+      
+        <a class="navbar-brand" href="#">Ночь музеев</a>
+
+        <div class="collapse navbar-collapse" >
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Главная</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Музеи</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">События</a>
+            </li>
+          </ul>
+          <form class="form-inline">
+            <input class="form-control" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Поиск</button>
+          </form>
+        </div>
+      </nav>
 </body>
 </html>

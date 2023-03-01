@@ -1,14 +1,14 @@
 package service
 
 import (
-	"alexdenkk/books/internal/books"
+	"akpl/museum/internal/places"
 )
 
 type Service struct {
-	Repository books.Repository
+	Repository places.Repository
 }
 
-func New(repo books.Repository) *Service {
+func New(repo places.Repository) *Service {
 	return &Service{
 		Repository: repo,
 	}

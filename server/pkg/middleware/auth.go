@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"alexdenkk/books/pkg/token"
+	"akpl/museum/pkg/token"
 	"net/http"
 	"strings"
 )

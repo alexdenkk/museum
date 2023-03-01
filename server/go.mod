@@ -1,4 +1,4 @@
-module apkl/museum
+module akpl/museum
 
 go 1.20
 
